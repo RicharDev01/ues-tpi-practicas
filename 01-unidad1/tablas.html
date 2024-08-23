@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- METADATA -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Welcome to my website</title>
+
+  <!-- LIBRERIA DE ICONOS DE GOOGLE (Material Symbols) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- FUENTE POPPINS DE GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ESTILOS CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <!-- LOGO DEL WEBSITE -->
+    <section class="logo-container">
+      <span class="material-symbols-outlined">logo_dev</span>
+    </section>
+
+    <!-- MENU DE NAVEGACION PRINCIPAL -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li class="menu_item">
+          <a href="./index.html" class="menu_link">
+            <span class="material-symbols-outlined">home</span>
+            <span class="">Home</span>
+          </a>
+        </li>
+        <li class="menu_item">
+          <a href="./imagenes.html" class="menu_link">
+            <span class="material-symbols-outlined">gallery_thumbnail</span>
+            <span class="">Gallery</span>
+          </a>
+        </li>
+        <li class="menu_item">
+          <a href="./videos.html" class="menu_link">
+            <span class="material-symbols-outlined">videocam</span>
+            <span class="">Videos</span>
+          </a>
+        </li>
+        <li class="menu_item">
+          <a href="./audios.html" class="menu_link">
+            <span class="material-symbols-outlined">music_note</span>
+            <span class="">Music</span>
+          </a>
+        </li>
+        <li class="menu_item">
+          <a href="./tablas.html" class="menu_link">
+            <span class="material-symbols-outlined">table</span>
+            <span class="">Tables</span>
+          </a>
+        </li>
+        <li class="menu_item">
+          <a href="./formularios.html" class="menu_link">
+            <span class="material-symbols-outlined">view_list</span>
+            <span class="">Forms</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- contenido principal del website -->
+  <main class="container center">
+
+    <table class="datatable">
+
+      <caption>Products List</caption>
+
+      <!-- <colgroup>
+        <col style="background-color: aquamarine;">
+      </colgroup> -->
+
+      <thead>
+        <th>Invoice</th>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Status</th>
+      </thead>
+
+      <tbody>
+        <tr class="row-data">
+          <td>#001</td>
+          <td>Audifonos Sony</td>
+          <td>Sonido envolvente, cancelacion de ruido</td>
+          <td>$ 215.00</td>
+          <td>
+            <img src="./assets/producto1-audifonos.jpg" alt="Audifonos sony" class="product-image">
+          </td>
+          <td> 
+            <span class="badge badge-active">Active</span>
+          </td>
+        </tr>
+
+        <tr class="row-data">
+          <td>#002</td>
+          <td>Audifonos Sony</td>
+          <td>Sonido envolvente, cancelacion de ruido</td>
+          <td>$ 215.00</td>
+          <td>
+            <img src="./assets/producto1-audifonos.jpg" alt="Audifonos sony">
+          </td>
+          <td> 
+            <span class="badge badge-inactive">Inactive</span>
+          </td>
+        </tr>
+
+        <tr class="row-data">
+          <td>#003</td>
+          <td>Audifonos Sony</td>
+          <td>Sonido envolvente, cancelacion de ruido</td>
+          <td>$ 215.00</td>
+          <td>
+            <img src="./assets/producto1-audifonos.jpg" alt="Audifonos sony">
+          </td>
+          <td> 
+            <span class="badge badge-sold">Sold</span>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </main>
+
+  <!-- PIE DE PAGINA PRINCIPAL -->
+  <footer>
+    <p>
+      <span class="footer_description">Powered by 💪</span>
+      <a href="https://github.com/RicharDev01" class="footer_link" target="_blank">Ricardo Pineda</a>
+    </p>
+  </footer>
+
+  <script src="./js/main.js" ></script>
+
+</body>
+
+</html>
