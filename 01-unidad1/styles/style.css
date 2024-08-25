@@ -287,11 +287,12 @@ header {
       0 0 .8rem hsla( var(--primary-color), .5 ),
       0 0 1rem hsla( var(--primary-color), .5 );
 }
+
 .form-text:focus:not(select.form-text) {
   background-color: hsla( var(--bg-color), .5  ) ;
 }
 
-.form-text:focus:invalid {
+/* .form-text:focus:invalid {
   box-shadow: 
       0 0 0 .3rem inset hsla( var(--danger-color), 1 ), 
       0 0 .8rem hsla( var(--danger-color), .5 ),
@@ -303,7 +304,7 @@ header {
       0 0 0 .3rem inset hsla( var(--success-color), 1 ), 
       0 0 .8rem hsla( var(--success-color), .5 ),
       0 0 1rem hsla( var(--success-color), .5 );
-}
+} */
 
 .form-control input,
 .form-control select {
@@ -331,16 +332,23 @@ header {
 
 .checks, .radios { user-select: none; }
 
-.checks input[type=checkbox]{ display: none }
+.checks input[type=checkbox]{ width: 0; height: 0; }
 
-.checks input[type=checkbox] + span {
+.checks input[type=checkbox]:focus + label {
+  box-shadow: 
+      0 0 0 .3rem inset hsla( var(--primary-color), 1 ), 
+      0 0 .8rem hsla( var(--primary-color), .5 ),
+      0 0 1rem hsla( var(--primary-color), .5 );
+}
+
+.checks input[type=checkbox] + label {
   background-color: hsl( var(--bg-color) ) ;
   color: hsla( var(--text-color) ) ;
   padding: 0.5rem 1rem;
   border-radius: 1rem
 }
 
-.checks input[type=checkbox]:checked + span {
+.checks input[type=checkbox]:checked + label {
   background-color: hsl( var(--primary-color) ) ;
   color:  hsl( var(--text-color) ) ;
   padding: 0.5rem 1rem;
@@ -349,25 +357,41 @@ header {
 
 h3:has(~ .checks) { margin-bottom: 1rem }
 
-.radios input[type=radio]{ display: none }
+.radios input[type=radio]{ width: 0; height: 0; }
 
-.radios input[type=radio] + span {
+.radios input[type=radio]:focus + label {
+  box-shadow: 
+      0 0 0 .3rem inset hsla( var(--primary-color), 1 ), 
+      0 0 .8rem hsla( var(--primary-color), .5 ),
+      0 0 1rem hsla( var(--primary-color), .5 );
+}
+
+.radios input[type=radio] + label {
   background-color: hsl( var(--bg-color) ) ;
   color: hsla( var(--text-color) ) ;
   padding: 0.5rem 1rem;
-  border-radius: 1rem
+  border-radius: 1rem;
 }
 
-.radios input[type=radio]:checked + span.man {
+.radios input[type=radio]:checked + label:has(span.man) {
   background-color: hsl( var(--primary-color) ) ;
   color:  hsl( var(--text-color) ) ;
   padding: 0.5rem 1rem;
   border-radius: 1rem
 }
 
-.radios input[type=radio]:checked + span.woman {
+.radios input[type=radio]:checked + label:has(span.woman) {
   background-color: #e84393 ;
   color:  hsl( var(--text-color) ) ;
   padding: 0.5rem 1rem;
   border-radius: 1rem
+}
+
+.radios label span.man {
+  display: flex;
+  align-items: flex-end;
+}
+.radios label span.woman {
+  display: flex;
+  align-items: flex-end;
 }

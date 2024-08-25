@@ -140,20 +140,24 @@
           <h3>Choose a language</h3>
           <div class="flex checks">
 
-            <label> 
-              <input type="checkbox" name="technologies" value="HTML" checked> <span>HTML</span>
+            <input type="checkbox" name="technologies" value="HTML" checked id="html"> 
+            <label for="html"> 
+              <span>HTML</span>
             </label>
 
-            <label>
-              <input type="checkbox" name="technologies" value="CSS"> <span>CSS</span>
+            <input type="checkbox" name="technologies" value="CSS" id="css">
+            <label for="css">
+              <span>CSS</span>
             </label>
 
-            <label>
-              <input type="checkbox" name="technologies" value="JavaScript"> <span>JavaScript</span>
+            <input type="checkbox" name="technologies" value="JavaScript" id="js">
+            <label for="js">
+              <span>JavaScript</span>
             </label>
 
-            <label>
-              <input type="checkbox" name="technologies" value="Java"> <span>Java</span>
+            <input type="checkbox" name="technologies" value="Java" id="java">
+            <label for="java">
+              <span>Java</span>
             </label>
 
           </div>
@@ -162,13 +166,24 @@
         <div class="form-control">
           <h3>Choose Sex:</h3>
           <div class="flex radios">
-            <label>
-              <input type="radio" name="sex" value="Men" checked> 
-              <span class="man"> <span class="material-symbols-outlined">person</span> Men</span>
+
+            <input type="radio" 
+                  name="sex" 
+                  value="Men" 
+                  checked 
+                  id="man">
+            <label for="man">
+              <span class="man"> 
+                <span class="material-symbols-outlined">person</span> Men</span>
             </label>
-            <label>
-              <input type="radio" name="sex" value="Female">
-              <span class="woman"> <span class="material-symbols-outlined">woman</span> Female</span>
+
+            <input type="radio" 
+                    name="sex" 
+                    value="Female"
+                    id="woman">
+            <label for="woman">
+              <span class="woman"> 
+                <span class="material-symbols-outlined">woman</span> Female</span>
             </label>
           </div>
         </div>
